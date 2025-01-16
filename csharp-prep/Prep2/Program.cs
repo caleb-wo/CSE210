@@ -10,7 +10,7 @@ class Program
         string letterGrade;
 
         /* 100-90, 89-80, 79-70, 69-60, 59-50 */
-        if (grade >= 90)
+        if (grade >= 90 && grade <= 100)
         {
             letterGrade = "A";
         }
