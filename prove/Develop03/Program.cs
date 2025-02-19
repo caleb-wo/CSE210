@@ -23,15 +23,12 @@ class Program
                 );
             }
         }
-        // Scripture s = new Scripture(
-        //     "Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths."
-        //     ,"Proverbs 3: 5-6"
-        // );
+        
         Console.Clear();
         Console.WriteLine("What is the verse reference? (Genesis 3:12)");
         string refer = Console.ReadLine();
         Scripture s = myLibrary.getScripture(refer);
-        while (!s.checkHidden() && !s.getForceQuit())
+        while (!s.getForceQuit() && !s.checkHidden())
         {
             Console.Clear();
             Console.WriteLine(s.getRef().getRef());
