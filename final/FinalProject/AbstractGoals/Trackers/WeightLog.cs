@@ -1,3 +1,5 @@
+using Goals;
+
 namespace Tracker
 {
     class WeightLog
@@ -10,6 +12,12 @@ namespace Tracker
             _Weight = Weight;
             _Date = Goal.GetDate().ToString();
         }
+        public WeightLog( string Weight, string Date )
+        {
+            _Weight = Weight;
+            _Date = Date;
+        }        
+        
         // Getters
         public string GetWeight(){ return _Weight; }
         public string GetDate(){ return _Date; }

@@ -1,3 +1,5 @@
+using Goals;
+
 namespace Tracker
 {
     class TimeLog
@@ -9,6 +11,12 @@ namespace Tracker
         {
             _Time = Time;
             _Date = Goal.GetDate().ToString();
+        }
+
+        public TimeLog( string Time, string Date )
+        {
+            _Time = Time;
+            _Date = Date;
         }
         // Getters
         public string GetTime(){ return _Time; }

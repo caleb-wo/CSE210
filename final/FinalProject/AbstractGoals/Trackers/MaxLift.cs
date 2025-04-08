@@ -1,3 +1,5 @@
+using Goals;
+
 namespace Tracker
 {
     class MaxLift
@@ -9,6 +11,12 @@ namespace Tracker
         {
             _Weight = Weight;
             _Date = Goal.GetDate().ToString();
+        }
+
+        public MaxLift( string Weight, string Date )
+        {
+            _Weight = Weight;
+            _Date = Date;
         }
         // Getters
         public string GetWeight(){ return _Weight; }

@@ -2,30 +2,25 @@ using System.ComponentModel.Design;
 using System.Net.Mail;
 using System.Reflection.Metadata;
 using System.Linq;
+using Goals;
 
 abstract class FitnessGoal : Goal
 {
-    // Fields
-    private string _UserWeight;
-    private string _UserHeight;
-    private int _UserAge;
-    private bool _IsMale;
-
     // Constuctor
     public FitnessGoal
     (   
-        int OwnerId,
-        string Description, string Reward,
-        string Weight, string Height, 
-        int Age, bool IsMale
-    ) : base( OwnerId, Description, Reward )
-    {
-        _UserWeight = Weight;
-        _UserHeight = Height;
-        _UserAge = Age;
-        _IsMale = IsMale;
-    } 
+        string OwnerId,
+        string Description, string Reward
+    ) : base( OwnerId, Description, Reward ){} 
 
+    // CSV Constructor
+    public FitnessGoal
+    (   
+        string OwnerId,
+        string Description, string Reward,
+        bool IsComplete, string StartDate,
+        string EndDate
+    ) : base( OwnerId, Description, Reward, IsComplete, StartDate, EndDate ){} 
     // Abstract Methods
     public abstract void CheckIn();
 
